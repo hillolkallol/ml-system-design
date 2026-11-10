@@ -523,6 +523,9 @@ flowchart LR
 
 ## References
 
+- [How Machine Learning Powers Facebook's News Feed Ranking Algorithm (engineering blog, 2021)](https://engineering.fb.com/2021/01/26/core-infra/news-feed-ranking/)
+- [Practical Lessons from Predicting Clicks on Ads at Facebook, He et al. 2014](https://research.facebook.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/)
+- [Progressive Layered Extraction (PLE), Tang et al. 2020](https://doi.org/10.1145/3383313.3412236)
 - [Deep Learning Recommendation Model (DLRM), Naumov et al. 2019](https://arxiv.org/abs/1906.00091)
 - [DCN V2: Improved Deep & Cross Network, Wang et al. 2020](https://arxiv.org/abs/2008.13535)
 - [MMoE: Modeling Task Relationships in Multi-task Learning, Ma et al. 2018](https://dl.acm.org/doi/10.1145/3219819.3220007)

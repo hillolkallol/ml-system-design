@@ -357,7 +357,7 @@ flowchart TB
 ## References
 
 - [τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, Yao et al. 2024](https://arxiv.org/abs/2406.12045)
-- [SWE-bench, Jimenez et al. 2023](https://arxiv.org/abs/2310.06770)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?, Jimenez et al. 2023](https://arxiv.org/abs/2310.06770)
 - [WebArena: A Realistic Web Environment for Building Autonomous Agents, Zhou et al. 2023](https://arxiv.org/abs/2307.13854)
 - [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments, Xie et al. 2024](https://arxiv.org/abs/2404.07972)
 - [Generative Agents: Interactive Simulacra of Human Behavior, Park et al. 2023](https://arxiv.org/abs/2304.03442)

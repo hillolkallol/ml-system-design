@@ -21,7 +21,7 @@ Diagrams are written in [Mermaid](https://mermaid.js.org/), which GitHub renders
 
 | # | Topic | Key concepts |
 |---|-------|--------------|
-| | _Coming soon_ | |
+| 1 | [Feed Ranking for a Large-Scale Social Network](topics/feed-ranking.md) | Multi-stage funnel, two-tower retrieval, multi-task ranking (MMoE), fan-out strategies, position bias, network effects in A/B tests |
 
 ## Contributing
 

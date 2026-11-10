@@ -70,6 +70,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [Feature Store](ml-infra/feature-store.md) | Online vs offline stores, point-in-time joins (event vs availability time), batch / streaming / on-demand features, training-serving skew detection, feature logging, sliding-window tiles, TTLs, governance |
+| [LLM Inference Serving Platform](ml-infra/llm-inference-serving.md) | Prefill vs decode, KV cache memory math, continuous batching, paged KV cache, prefix caching, chunked / disaggregated prefill, tensor / pipeline / expert parallelism, quantization, speculative decoding, multi-LoRA, prefix-aware routing, goodput |
 
 ## Contributing
 

@@ -19,13 +19,27 @@ Diagrams are written in [Mermaid](https://mermaid.js.org/), which GitHub renders
 
 ## Topics
 
-| # | Topic | Key concepts |
-|---|-------|--------------|
-| 1 | [Feed Ranking for a Large-Scale Social Network](topics/feed-ranking.md) | Multi-stage funnel, two-tower retrieval, multi-task ranking (MMoE), fan-out strategies, position bias, network effects in A/B tests |
-| 2 | [Improving Feed Ranking to Increase Time Spent](topics/feed-time-spent.md) | Time-spent driver tree, diagnosis, dwell/watch-time prediction, duration bias, session-continuation scoring, long-term value / RL, cannibalization, well-being guardrails |
-| 3 | [Video Recommendation System](topics/video-recommendation.md) | Multi-source retrieval, two-tower + log-Q correction, co-watch, content understanding for cold start, position-bias tower, watch-time objectives |
-| 4 | [Ad Click Prediction](topics/ad-click-prediction.md) | Calibration and auctions (eCPM, GSP), hashing trick, LR → DCN evolution, online learning, negative downsampling correction, delayed conversions |
-| 5 | [Harmful Content Detection](topics/harmful-content-detection.md) | Multimodal early fusion, multi-label heads, per-severity thresholds, layered detection, review-queue prioritization, prevalence metric, adversarial adaptation |
+Topics are grouped by problem type under [`topics/`](topics/).
+
+### Ranking — [`topics/ranking/`](topics/ranking/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Feed Ranking for a Large-Scale Social Network](topics/ranking/feed-ranking.md) | Multi-stage funnel, two-tower retrieval, multi-task ranking (MMoE), fan-out strategies, position bias, network effects in A/B tests |
+| [Improving Feed Ranking to Increase Time Spent](topics/ranking/feed-time-spent.md) | Time-spent driver tree, diagnosis, dwell/watch-time prediction, duration bias, session-continuation scoring, long-term value / RL, cannibalization, well-being guardrails |
+| [Ad Click Prediction](topics/ranking/ad-click-prediction.md) | Calibration and auctions (eCPM, GSP), hashing trick, LR → DCN evolution, online learning, negative downsampling correction, delayed conversions |
+
+### Recommendations — [`topics/recommendations/`](topics/recommendations/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Video Recommendation System](topics/recommendations/video-recommendation.md) | Multi-source retrieval, two-tower + log-Q correction, co-watch, content understanding for cold start, position-bias tower, watch-time objectives |
+
+### Trust and Safety — [`topics/trust-and-safety/`](topics/trust-and-safety/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Harmful Content Detection](topics/trust-and-safety/harmful-content-detection.md) | Multimodal early fusion, multi-label heads, per-severity thresholds, layered detection, review-queue prioritization, prevalence metric, adversarial adaptation |
 
 ## Contributing
 

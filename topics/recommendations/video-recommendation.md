@@ -2,7 +2,7 @@
 
 > **Problem:** Design the homepage recommendation system for a large video platform with billions of videos and hundreds of millions of daily users. When a user opens the app, show a personalized list of videos they're likely to watch and enjoy.
 
-Related: [Feed Ranking System](feed-ranking.md) covers the multi-stage funnel and multi-task ranking in depth. [Improving Feed Ranking for Time Spent](feed-time-spent.md) covers watch-time labels and duration bias. This doc focuses on what's **different for video**: no social graph, a huge corpus, watch-time objectives, and content understanding.
+Related: [Feed Ranking System](../ranking/feed-ranking.md) covers the multi-stage funnel and multi-task ranking in depth. [Improving Feed Ranking for Time Spent](../ranking/feed-time-spent.md) covers watch-time labels and duration bias. This doc focuses on what's **different for video**: no social graph, a huge corpus, watch-time objectives, and content understanding.
 
 ---
 
@@ -97,7 +97,7 @@ Using all of them in a multi-task model gives the best balance.
 | Task | Positive | Negative |
 |------|----------|----------|
 | Click | Clicked an impressed video | Impressed, not clicked |
-| Watch time | Regression on duration-normalized watch time (see [duration bias](feed-time-spent.md#41-predict-time-per-post-properly)) | — |
+| Watch time | Regression on duration-normalized watch time (see [duration bias](../ranking/feed-time-spent.md#41-predict-time-per-post-properly)) | — |
 | Satisfied | Watch ≥ X% **and** no dislike, or a positive survey answer | Quick abandon (< 10 s), dislike |
 | Dislike / not interested | Explicit action | No action |
 
@@ -193,7 +193,7 @@ flowchart LR
 
 ### Ranking model
 
-Same structure as the [feed ranking heavy ranker](feed-ranking.md#stage-3-heavy-ranker-multi-task-dnn): embeddings, then a feature-interaction layer, then shared experts with per-task gates, then task heads. Video-specific additions:
+Same structure as the [feed ranking heavy ranker](../ranking/feed-ranking.md#stage-3-heavy-ranker-multi-task-dnn): embeddings, then a feature-interaction layer, then shared experts with per-task gates, then task heads. Video-specific additions:
 
 - **Target attention over watch history:** weigh each past watch by relevance to the candidate video.
 - **Duration-debiased watch-time head:** predict the watch-time quantile within a duration bucket.

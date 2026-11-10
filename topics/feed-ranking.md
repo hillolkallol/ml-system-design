@@ -1,6 +1,6 @@
 # Feed Ranking System for a Large-Scale Social Network
 
-> **Problem:** Design the ML system that decides which posts appear in a user's home feed, and in what order, for a social network with about a billion daily active users. Think Facebook News Feed, the LinkedIn feed, or the Instagram home feed.
+> **Problem:** Design the ML system that decides which posts appear in a user's home feed, and in what order, for a social network with about a billion daily active users.
 
 ---
 
@@ -327,7 +327,7 @@ The heavy ranker scores each post independently. Re-ranking fixes problems that 
 | Level | Metric | Why |
 |-------|--------|-----|
 | Per task | **ROC-AUC**, PR-AUC | Discrimination. PR-AUC is better for rare events such as shares. |
-| Per task | **Normalized entropy (NE)** = log loss / entropy of the background CTR | Used at Meta. Sensitive to calibration as well as ranking. |
+| Per task | **Normalized entropy (NE)** = log loss / entropy of the background CTR | Sensitive to calibration as well as ranking. |
 | Per task | **Calibration** (predicted / observed ratio) | Calibration matters because scores are combined with weights |
 | Ranking | **nDCG@k**, MAP, recall@k, computed per session | Measures the quality of the order across the whole list |
 | Retrieval | Recall@K of engaged posts among the candidates | Measures candidate generation coverage |
@@ -523,10 +523,8 @@ flowchart LR
 
 ## References
 
-- [Facebook News Feed ranking (Meta Engineering)](https://engineering.fb.com/2021/01/26/core-infra/news-feed-ranking/)
 - [Deep Learning Recommendation Model (DLRM), Naumov et al. 2019](https://arxiv.org/abs/1906.00091)
 - [DCN V2: Improved Deep & Cross Network, Wang et al. 2020](https://arxiv.org/abs/2008.13535)
 - [MMoE: Modeling Task Relationships in Multi-task Learning, Ma et al. 2018](https://dl.acm.org/doi/10.1145/3219819.3220007)
 - [Deep Interest Network (DIN), Zhou et al. 2018](https://arxiv.org/abs/1706.06978)
-- [Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations, Yi et al. 2019](https://research.google/pubs/sampling-bias-corrected-neural-modeling-for-large-corpus-item-recommendations/)
-- [Practical Lessons from Predicting Clicks on Ads at Facebook, He et al. 2014](https://research.facebook.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/)
+- [Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations, Yi et al. 2019](https://doi.org/10.1145/3298689.3346996)

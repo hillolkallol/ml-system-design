@@ -55,6 +55,12 @@ Topics are grouped by problem type, one folder per category.
 | [Realistic Simulation for Autonomous Driving](simulation/autonomous-driving-simulation.md) | Log replay vs closed-loop, multi-agent behaviour models (sim agents), neural sensor simulation (3DGS / NeRF), adversarial scenario generation, perception consistency, sim-to-real correlation, importance sampling for rare events |
 | [Realistic Simulation for LLM Agents](simulation/llm-agent-simulation.md) | Environments as (state, task, actions, verifier), stateful mocks vs LLM-simulated tools, user simulators and their failure modes, task generation with solvability checks, reward hacking defences, curriculum, sim-to-real correlation, pass^k |
 
+### Computer Vision — [`computer-vision/`](computer-vision/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Visual Search System](computer-vision/visual-search.md) | Embedding + ANN instead of classification, street-to-shop pairs, hard negative mining, triplet / InfoNCE losses, IVF-PQ and HNSW, exact-match re-ranking, re-indexing when the embedding model changes |
+
 ## Contributing
 
 Spotted a mistake or have a better approach? Open an issue or a PR.

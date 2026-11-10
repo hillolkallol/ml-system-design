@@ -60,6 +60,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [Visual Search System](computer-vision/visual-search.md) | Embedding + ANN instead of classification, street-to-shop pairs, hard negative mining, triplet / InfoNCE losses, IVF-PQ and HNSW, exact-match re-ranking, re-indexing when the embedding model changes |
+| [Face and License Plate Blurring for Street-Level Imagery](computer-vision/street-view-blurring.md) | Recall-first object detection, low operating thresholds, panorama re-projection and tiling, FPN + focal loss, test-time augmentation and ensembles, recall at low IoU and coverage, audit miss rate, batch GPU pipeline |
 
 ## Contributing
 

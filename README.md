@@ -36,6 +36,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [Video Recommendation System](recommendations/video-recommendation.md) | Multi-source retrieval, two-tower + log-Q correction, co-watch, content understanding for cold start, position-bias tower, watch-time objectives |
+| [People You May Know](recommendations/people-you-may-know.md) | Link prediction, two-sided P(send) × P(accept), friends-of-friends at scale with hub pruning, Adamic-Adar, GNN embeddings, temporal splits against leakage, privacy filters, cluster-based A/B tests |
 
 ### Trust and Safety — [`trust-and-safety/`](trust-and-safety/)
 

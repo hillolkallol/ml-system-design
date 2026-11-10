@@ -325,4 +325,5 @@ flowchart TB
 - [DCN V2: Improved Deep & Cross Network, Wang et al. 2020](https://arxiv.org/abs/2008.13535)
 - [Deep Interest Network, Zhou et al. 2018](https://arxiv.org/abs/1706.06978)
 - [Wide & Deep Learning for Recommender Systems, Cheng et al. 2016](https://arxiv.org/abs/1606.07792)
-- *Modeling Delayed Feedback in Display Advertising*, Chapelle, KDD 2014
+- [Modeling Delayed Feedback in Display Advertising, Chapelle 2014](https://doi.org/10.1145/2623330.2623634)
+- [Practical Lessons from Predicting Clicks on Ads at Facebook, He et al. 2014](https://research.facebook.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/)

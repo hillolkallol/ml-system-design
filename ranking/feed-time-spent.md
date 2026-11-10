@@ -429,4 +429,6 @@ sequenceDiagram
 - [Feed Ranking System (baseline design)](feed-ranking.md)
 - [Top-K Off-Policy Correction for a REINFORCE Recommender System, Chen et al. 2019](https://arxiv.org/abs/1812.02353)
 - [MMoE: Modeling Task Relationships in Multi-task Learning, Ma et al. 2018](https://dl.acm.org/doi/10.1145/3219819.3220007)
-- *Deconfounding Duration Bias in Watch-time Prediction for Video Recommendation*, Zhan et al., KDD 2022
+- [Deconfounding Duration Bias in Watch-time Prediction for Video Recommendation, Zhan et al. 2022](https://arxiv.org/abs/2206.06003)
+- [Deep Neural Networks for YouTube Recommendations, Covington et al. 2016](https://doi.org/10.1145/2959100.2959190)
+- [Recommending What Video to Watch Next: A Multitask Ranking System, Zhao et al. 2019](https://doi.org/10.1145/3298689.3346997)

@@ -346,6 +346,8 @@ flowchart TB
 
 ## References
 
+- [Deep Neural Networks for YouTube Recommendations, Covington et al. 2016](https://doi.org/10.1145/2959100.2959190)
+- [Recommending What Video to Watch Next: A Multitask Ranking System, Zhao et al. 2019](https://doi.org/10.1145/3298689.3346997)
 - [Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations, Yi et al. 2019](https://doi.org/10.1145/3298689.3346996)
 - [Deep Interest Network, Zhou et al. 2018](https://arxiv.org/abs/1706.06978)
 - [Wide & Deep Learning for Recommender Systems, Cheng et al. 2016](https://arxiv.org/abs/1606.07792)

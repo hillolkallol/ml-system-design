@@ -42,6 +42,12 @@ Topics are grouped by problem type under [`topics/`](topics/).
 | [Harmful Content Detection](topics/trust-and-safety/harmful-content-detection.md) | Multimodal early fusion, multi-label heads, per-severity thresholds, layered detection, review-queue prioritization, prevalence metric, adversarial adaptation |
 | [Payment Fraud Detection](topics/trust-and-safety/payment-fraud-detection.md) | Cost-sensitive decisions (approve / challenge / decline), velocity and graph features, GBDT + rules, delayed chargeback labels, selection bias, dollar-weighted recall |
 
+### Agentic Systems — [`topics/agentic/`](topics/agentic/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [AI Customer Support Agent](topics/agentic/customer-support-agent.md) | Workflow vs agent autonomy, ReAct tool loop, customer-scoped and policy-checked tools, guardrails and prompt injection, RAG, simulated-user evals with pass^k, LLM-as-judge, cost/latency routing |
+
 ## Contributing
 
 Spotted a mistake or have a better approach? Open an issue or a PR.

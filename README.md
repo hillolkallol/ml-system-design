@@ -48,6 +48,12 @@ Topics are grouped by problem type, one folder per category.
 |-------|--------------|
 | [AI Customer Support Agent](agentic/customer-support-agent.md) | Workflow vs agent autonomy, ReAct tool loop, customer-scoped and policy-checked tools, guardrails and prompt injection, RAG, simulated-user evals with pass^k, LLM-as-judge, cost/latency routing |
 
+### Simulation — [`simulation/`](simulation/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Realistic Simulation for Autonomous Driving](simulation/autonomous-driving-simulation.md) | Log replay vs closed-loop, multi-agent behaviour models (sim agents), neural sensor simulation (3DGS / NeRF), adversarial scenario generation, perception consistency, sim-to-real correlation, importance sampling for rare events |
+
 ## Contributing
 
 Spotted a mistake or have a better approach? Open an issue or a PR.

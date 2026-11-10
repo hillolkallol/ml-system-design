@@ -65,6 +65,12 @@ Topics are grouped by problem type, one folder per category.
 | [Visual Search System](computer-vision/visual-search.md) | Embedding + ANN instead of classification, street-to-shop pairs, hard negative mining, triplet / InfoNCE losses, IVF-PQ and HNSW, exact-match re-ranking, re-indexing when the embedding model changes |
 | [Face and License Plate Blurring for Street-Level Imagery](computer-vision/street-view-blurring.md) | Recall-first object detection, low operating thresholds, panorama re-projection and tiling, FPN + focal loss, test-time augmentation and ensembles, recall at low IoU and coverage, audit miss rate, batch GPU pipeline |
 
+### ML Infrastructure — [`ml-infra/`](ml-infra/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Feature Store](ml-infra/feature-store.md) | Online vs offline stores, point-in-time joins (event vs availability time), batch / streaming / on-demand features, training-serving skew detection, feature logging, sliding-window tiles, TTLs, governance |
+
 ## Contributing
 
 Spotted a mistake or have a better approach? Open an issue or a PR.

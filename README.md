@@ -40,6 +40,7 @@ Topics are grouped by problem type under [`topics/`](topics/).
 | Topic | Key concepts |
 |-------|--------------|
 | [Harmful Content Detection](topics/trust-and-safety/harmful-content-detection.md) | Multimodal early fusion, multi-label heads, per-severity thresholds, layered detection, review-queue prioritization, prevalence metric, adversarial adaptation |
+| [Payment Fraud Detection](topics/trust-and-safety/payment-fraud-detection.md) | Cost-sensitive decisions (approve / challenge / decline), velocity and graph features, GBDT + rules, delayed chargeback labels, selection bias, dollar-weighted recall |
 
 ## Contributing
 

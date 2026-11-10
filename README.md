@@ -22,6 +22,7 @@ Diagrams are written in [Mermaid](https://mermaid.js.org/), which GitHub renders
 | # | Topic | Key concepts |
 |---|-------|--------------|
 | 1 | [Feed Ranking for a Large-Scale Social Network](topics/feed-ranking.md) | Multi-stage funnel, two-tower retrieval, multi-task ranking (MMoE), fan-out strategies, position bias, network effects in A/B tests |
+| 2 | [Improving Feed Ranking to Increase Time Spent](topics/feed-time-spent.md) | Time-spent driver tree, diagnosis, dwell/watch-time prediction, duration bias, session-continuation scoring, long-term value / RL, cannibalization, well-being guardrails |
 
 ## Contributing
 

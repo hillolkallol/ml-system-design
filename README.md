@@ -41,6 +41,7 @@ Topics are grouped by problem type, one folder per category.
 |-------|--------------|
 | [Harmful Content Detection](trust-and-safety/harmful-content-detection.md) | Multimodal early fusion, multi-label heads, per-severity thresholds, layered detection, review-queue prioritization, prevalence metric, adversarial adaptation |
 | [Payment Fraud Detection](trust-and-safety/payment-fraud-detection.md) | Cost-sensitive decisions (approve / challenge / decline), velocity and graph features, GBDT + rules, delayed chargeback labels, selection bias, dollar-weighted recall |
+| [Multimodal Perception and Authentication](trust-and-safety/multimodal-authentication.md) | 1:1 verification with face / voice / behavioural embeddings, liveness and presentation-attack detection, score-level fusion with quality and context, risk-based thresholds, TAR@FAR and APCER/BPCER, demographic fairness, on-device templates |
 
 ### Agentic Systems — [`agentic/`](agentic/)
 

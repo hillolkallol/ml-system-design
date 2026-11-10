@@ -51,6 +51,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [AI Customer Support Agent](agentic/customer-support-agent.md) | Workflow vs agent autonomy, ReAct tool loop, customer-scoped and policy-checked tools, guardrails and prompt injection, RAG, simulated-user evals with pass^k, LLM-as-judge, cost/latency routing |
+| [Autonomous Coding Agent](agentic/coding-agent.md) | Context engineering for large repos, agentic search vs RAG, edit-tool design, reproduce → change → verify loop, sub-agents and compaction, sandboxing and prompt injection, evaluation on internal PR history, merge and revert rates |
 
 ### Simulation — [`simulation/`](simulation/)
 

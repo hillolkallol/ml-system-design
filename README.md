@@ -2,6 +2,8 @@
 
 Notes for ML system design interviews, one topic per document. Each one works through a real problem the way you would in an interview: clarify the requirements, frame the ML problem, design the data and features, pick a model, evaluate it, and serve it at scale.
 
+> **Note:** These documents, including their diagrams, were written by an AI coding agent ([Claude Code](https://claude.com/claude-code)), directed and reviewed by the repository owner as interview preparation. They're study notes, not authoritative references. Verify important details against the linked papers, and please open an issue if you spot an error.
+
 ## How each topic is structured
 
 Every topic follows the same outline, so you can practise a consistent interview flow:

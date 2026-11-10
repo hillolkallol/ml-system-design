@@ -53,6 +53,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [Realistic Simulation for Autonomous Driving](simulation/autonomous-driving-simulation.md) | Log replay vs closed-loop, multi-agent behaviour models (sim agents), neural sensor simulation (3DGS / NeRF), adversarial scenario generation, perception consistency, sim-to-real correlation, importance sampling for rare events |
+| [Realistic Simulation for LLM Agents](simulation/llm-agent-simulation.md) | Environments as (state, task, actions, verifier), stateful mocks vs LLM-simulated tools, user simulators and their failure modes, task generation with solvability checks, reward hacking defences, curriculum, sim-to-real correlation, pass^k |
 
 ## Contributing
 

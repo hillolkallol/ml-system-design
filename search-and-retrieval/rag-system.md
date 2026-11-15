@@ -134,6 +134,60 @@ There are no labels at the start. Build them:
 
 ## 4. Model Development
 
+### Embedding model
+
+The embedding model powers dense retrieval: it turns every chunk (offline) and every query (online) into a vector, so that **text with similar meaning lands close together**. Retrieval quality depends on it more than on any other model in the pipeline.
+
+#### How it works
+
+```mermaid
+flowchart LR
+    T["Text<br/>chunk or query"] --> TOK["Tokenize<br/>~60–500 tokens"]
+    TOK --> ENC["Transformer encoder<br/>one vector per token,<br/>each aware of the whole text"]
+    ENC --> POOL["Pool<br/>mean of token vectors<br/>or the [CLS] token"]
+    POOL --> NORM["L2-normalize<br/>length = 1"]
+    NORM --> V["768-d vector"]
+```
+
+- **Bi-encoder:** queries and chunks are encoded **separately** by the same model. Chunk vectors can be computed once, offline; only the query is encoded at request time.
+- **Similarity:** cosine similarity, which is a plain dot product once vectors are normalized. That's what the ANN index searches.
+- **Example:** "What's the per diem in Tokyo?" and "Travel Policy > International > Per diem: … Tokyo … $110 allowance" share almost no exact words but score ~0.8; an unrelated booking-policy chunk scores ~0.4.
+- **Asymmetric prefixes:** some models expect a marker such as `query:` / `passage:` (or an instruction) in front of the text. Use them exactly as the model was trained, or quality drops.
+
+#### Choosing a model
+
+| Criterion | What to check |
+|-----------|---------------|
+| **Quality on your data** ⭐ | Recall@K on your own evaluation set. Public leaderboards are a starting shortlist, not a decision: internal jargon and document types differ. |
+| Max input length | Must cover the chunk size (e.g. 512 tokens). Text past the limit is silently cut off and never embedded. |
+| Dimension | 384–1,024 is typical. Index memory and search latency grow linearly with it. Some models are trained so vectors can be **truncated** (e.g. 1,024 → 256) with a small quality loss. |
+| Languages | Multilingual if the corpus or users are; check cross-language retrieval (query in one language, document in another) |
+| Size and latency | Query encoding must fit ~10–20 ms; the corpus must be re-embeddable in a reasonable time (see below) |
+| Licensing and hosting | Self-hosted vs API: API models can't be fine-tuned freely, and sending internal documents out may not be allowed |
+
+#### Fine-tuning
+
+Off-the-shelf models don't know internal vocabulary (project codenames, team acronyms, product names). Fine-tune once the evaluation set can prove it helps:
+
+- **Data:** (question, relevant chunk) pairs from synthetic LLM-generated questions, logged thumbs-up answers and clicked citations (see section 3).
+- **Loss:** contrastive (InfoNCE). For each question `q` with positive chunk `p⁺`:
+
+  ```
+  L = − log  exp(cos(q, p⁺)/τ) / Σⱼ exp(cos(q, pⱼ)/τ)
+  ```
+
+  The sum runs over the positive plus negatives: **in-batch negatives** (other questions' chunks; cheap and plentiful) and **hard negatives** (chunks the current model ranks high but that don't answer the question). `τ` is a temperature, typically ~0.05.
+- **Watch for false negatives:** a "hard negative" from the same document often does answer the question. Filter hard negatives with the cross-encoder or an LLM judge.
+- **Avoid forgetting:** mix in general-domain pairs, and check that recall on general questions doesn't drop.
+
+#### Serving and versioning
+
+| Path | How |
+|------|-----|
+| **Offline (chunks)** | Batched GPU jobs. A full re-index is 50B tokens: a ~110M-parameter encoder needs ~2 × 110M × 50B ≈ 1.1 × 10¹⁹ FLOPs, roughly **~100 GPU-hours** at realistic utilization, so a few hours on a few dozen GPUs. Incremental updates embed only changed documents. |
+| **Online (queries)** | A low-latency embedding service (~10–20 ms), small batches, plus a cache for repeated queries |
+| **Versioning** | Store the model version on every vector. Queries and chunks **must** use the same version: vectors from different models live in unrelated spaces. A model upgrade means a full re-embed, a new index built alongside the old one, and an atomic switch. |
+
 ### Retrieval: hybrid by default
 
 | Retriever | Good at | Weak at |
@@ -143,7 +197,7 @@ There are no labels at the start. Build them:
 
 Run both, merge with **reciprocal rank fusion** (`Σ 1/(k + rank)`), and take the top ~100.
 
-**Embedding model:** start with a strong off-the-shelf embedding model. Fine-tune with a contrastive loss on synthetic and logged pairs plus hard negatives once you have an evaluation set to prove it helps. Internal jargon is where fine-tuning pays off most.
+The dense retriever uses the embedding model described above.
 
 ### Query understanding
 
@@ -416,6 +470,9 @@ For serving the LLM itself, see [LLM Inference Serving Platform](../ml-infra/llm
 
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, Lewis et al. 2020](https://arxiv.org/abs/2005.11401)
 - [Dense Passage Retrieval for Open-Domain Question Answering, Karpukhin et al. 2020](https://arxiv.org/abs/2004.04906)
+- [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks, Reimers & Gurevych 2019](https://arxiv.org/abs/1908.10084)
+- [MTEB: Massive Text Embedding Benchmark, Muennighoff et al. 2022](https://arxiv.org/abs/2210.07316)
+- [Matryoshka Representation Learning, Kusupati et al. 2022](https://arxiv.org/abs/2205.13147)
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels (HyDE), Gao et al. 2022](https://arxiv.org/abs/2212.10496)
 - [Lost in the Middle: How Language Models Use Long Contexts, Liu et al. 2023](https://arxiv.org/abs/2307.03172)
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection, Asai et al. 2023](https://arxiv.org/abs/2310.11511)

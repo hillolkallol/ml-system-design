@@ -43,6 +43,7 @@ Topics are grouped by problem type, one folder per category.
 | Topic | Key concepts |
 |-------|--------------|
 | [Embedding-Based Retrieval for Product Search](search-and-retrieval/embedding-based-retrieval.md) | Two-tower retrieval, hybrid lexical + dense with reciprocal rank fusion, negative sampling and log-Q correction, hard-negative mining, IVF-PQ / HNSW sharding, filter-aware ANN, delta indexes for freshness, re-indexing on model change, Recall@K and ANN recall |
+| [Candidate Retrieval for a Movie Streaming Service](search-and-retrieval/movie-streaming-retrieval.md) | Full multi-source retrieval (continue watching, two-tower, sequential next-watch, item-to-item, content-based, trending, exploration), exact scoring for a small catalog, full softmax, source quotas, incremental recall, licensing and maturity filters, hybrid precompute vs online, cold start for new titles |
 
 ### Trust and Safety — [`trust-and-safety/`](trust-and-safety/)
 

@@ -38,6 +38,12 @@ Topics are grouped by problem type, one folder per category.
 | [Video Recommendation System](recommendations/video-recommendation.md) | Multi-source retrieval, two-tower + log-Q correction, co-watch, content understanding for cold start, position-bias tower, watch-time objectives |
 | [People You May Know](recommendations/people-you-may-know.md) | Link prediction, two-sided P(send) × P(accept), friends-of-friends at scale with hub pruning, Adamic-Adar, GNN embeddings, temporal splits against leakage, privacy filters, cluster-based A/B tests |
 
+### Search and Retrieval — [`search-and-retrieval/`](search-and-retrieval/)
+
+| Topic | Key concepts |
+|-------|--------------|
+| [Embedding-Based Retrieval for Product Search](search-and-retrieval/embedding-based-retrieval.md) | Two-tower retrieval, hybrid lexical + dense with reciprocal rank fusion, negative sampling and log-Q correction, hard-negative mining, IVF-PQ / HNSW sharding, filter-aware ANN, delta indexes for freshness, re-indexing on model change, Recall@K and ANN recall |
+
 ### Trust and Safety — [`trust-and-safety/`](trust-and-safety/)
 
 | Topic | Key concepts |

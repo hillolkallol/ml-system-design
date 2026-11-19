@@ -74,6 +74,7 @@ Topics are grouped by problem type, one folder per category.
 |-------|--------------|
 | [Visual Search System](computer-vision/visual-search.md) | Embedding + ANN instead of classification, street-to-shop pairs, hard negative mining, triplet / InfoNCE losses, IVF-PQ and HNSW, exact-match re-ranking, re-indexing when the embedding model changes |
 | [Face and License Plate Blurring for Street-Level Imagery](computer-vision/street-view-blurring.md) | Recall-first object detection, low operating thresholds, panorama re-projection and tiling, FPN + focal loss, test-time augmentation and ensembles, recall at low IoU and coverage, audit miss rate, batch GPU pipeline |
+| [Digital Twin from Multi-Camera Data](computer-vision/camera-digital-twin.md) | Per-camera detection with ground-contact points, tracking-by-detection, calibration from zones → homography → full pinhole model → joint bundle adjustment → automatic drift correction, projection with uncertainty, multi-camera association and world-frame fusion, early vs late fusion, 2D map → 3D twin (reconstruction, triangulation, 3D boxes), edge + central serving, privacy |
 
 ### ML Infrastructure — [`ml-infra/`](ml-infra/)
 
